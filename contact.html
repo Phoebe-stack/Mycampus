@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <title></title>
+  <style type="text/css"></style>
+</head>
+<style type="text/css">
+  .ultra-regular {
+    font-family: "Ultra", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.besley{
+  font-family: "Besley", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+</style>
+<body class="bg-white">
+
+<!-- Navbar -->
+<div class="w-full flex items-center justify-center">
+  <nav class="bg-white shadow-md fixed w-5/6 top-5 rounded-lg z-50">
+    <div class="max-w-5xl mx-auto px-3">
+      <div class="flex justify-between items-center h-20">
+
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+          <a href="#" class="besley text-2xl font-bold text-black">Mycampuspal</a>
+        </div>
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-8">
+          <a href="index.html" class="besley text-gray-700 hover:text-green-600 transition">Home</a>
+          <a href="About.html" class="besley text-gray-700 hover:text-green-600 transition">About</a>
+          <a href="Features.html" class="besley text-gray-700 hover:text-green-600 transition">Features</a>
+          <a href="Blog.html" class="besley text-gray-700 hover:text-green-600 transition">Blog</a>
+          <a href="#" class="besley text-gray-700 hover:text-green-600 transition">Contact</a>
+        </div>
+
+        <!-- Button -->
+        <div class="hidden md:block">
+          <a href="#" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">
+            Get Started
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button id="menu-btn" class="text-gray-700 focus:outline-none">
+            ☰
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white">
+      <a href="#" class="block px-4 py-3 hover:bg-black-100">Home</a>
+      <a href="#" class="block px-4 py-3 hover:bg-black-100">About</a>
+      <a href="#" class="block px-4 py-3 hover:bg-black-100">Services</a>
+      <a href="#" class="block px-4 py-3 hover:bg-black-100">Contact</a>
+      <a href="#" class="block px-4 py-3 rounded-lg text-center bg-green-600 text-white">Get Started</a>
+    </div>
+  </nav>
+</div>
+<br><br><br>
+
+  <div class="text-center px-6 py-12 md:py-24 bg-white">
+  <h1 class="ultra-regular text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal text-slate-900 tracking-tighter leading-[0.95] mb-6 md:mb-10">
+    You're one bad semester <br class="hidden md:block"> 
+    away from falling behind
+  </h1>
+
+  <p class="besley text-base md:text-xl text-slate-500 font-medium max-w-2xl mx-auto mb-10 md:mb-12 leading-relaxed">
+    MyCampusPal gives you AI-powered study tools, live tutors, organized notes, 
+    and personalized quizzes — everything top students use to stay ahead.
+  </p>
+
+  <a href="#" class="besley inline-block bg-[#22C55E] text-white font-bold text-lg px-8 py-4 md:px-10 md:py-5 rounded-[22px] shadow-lg shadow-green-100 hover:bg-green-600 hover:scale-105 transition-all">
+    Get Started
+  </a>
+</div>
+
+
+</div>
+</body>
+</html>

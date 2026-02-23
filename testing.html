@@ -7,6 +7,72 @@
 	
 	</head>
 	<body>
+<section class="relative w-full min-h-screen bg-black text-white overflow-hidden font-mono flex flex-col justify-between p-6">
+  
+
+  <div class="absolute inset-0 z-0">
+    <img src="img/globe.png" alt="Globe" class="w-full h-full object-cover opacity-30 grayscale">
+    <div class="absolute inset-0 flex justify-center">
+      <div class="w-[1px] h-full bg-white/10"></div>
+    </div>
+  </div>
+
+  <header class="relative z-10 flex justify-between items-start text-[10px] tracking-widest uppercase">
+    <div class="font-black text-lg normal-case tracking-tighter">MyCampusPal</div>
+    <div class="hidden md:block">Subscribe to receive a notification upon our launch.</div>
+    <div class="flex gap-4">
+      <a href="#" class="hover:opacity-50 transition">FB</a>
+      <a href="#" class="hover:opacity-50 transition">IN</a>
+      <a href="#" class="hover:opacity-50 transition">X</a>
+    </div>
+  </header>
+
+  <main class="relative z-10 grid grid-cols-2 md:grid-cols-4 gap-4 items-center max-w-7xl mx-auto w-full">
+    
+    <div class="flex flex-col items-center group">
+      <span id="days" class="text-8xl md:text-[12rem] font-light tracking-tighter transition-all duration-500 group-hover:italic">18</span>
+      <span class="text-[10px] tracking-[0.3em] uppercase opacity-60">Days</span>
+    </div>
+
+    <div class="flex flex-col items-center group relative">
+      <div class="absolute left-0 top-1/2 w-2 h-2 bg-white rounded-full hidden md:block"></div>
+      <span id="hours" class="text-8xl md:text-[12rem] font-light tracking-tighter transition-all duration-500 group-hover:italic">09</span>
+      <span class="text-[10px] tracking-[0.3em] uppercase opacity-60">Hours</span>
+    </div>
+
+    <div class="flex flex-col items-center group">
+      <span id="minutes" class="text-8xl md:text-[12rem] font-light tracking-tighter transition-all duration-500 group-hover:italic">33</span>
+      <span class="text-[10px] tracking-[0.3em] uppercase opacity-60">Minutes</span>
+    </div>
+
+    <div class="flex flex-col items-center group">
+      <span id="seconds" class="text-8xl md:text-[12rem] font-light tracking-tighter transition-all duration-500 group-hover:italic">41</span>
+      <span class="text-[10px] tracking-[0.3em] uppercase opacity-60">Seconds</span>
+    </div>
+
+  </main>
+
+  <footer class="relative z-10 w-full">
+    <div class="max-w-md mx-auto mb-16 relative">
+      <form class="flex border-b border-white/30 pb-2">
+        <input type="email" placeholder="Your Email" class="bg-transparent flex-1 outline-none text-sm italic opacity-50 focus:opacity-100 transition">
+        <button type="submit" class="text-xs uppercase tracking-widest font-bold hover:text-[#22C55E] transition">Sign Up</button>
+      </form>
+    </div>
+
+    <div class="flex justify-between items-end text-[10px] tracking-widest uppercase opacity-60">
+      <div>© Prince</div>
+      <div class="normal-case italic">The Ultimate Student Companion</div>
+      <div>Follow us</div>
+    </div>
+  </footer>
+
+</section>
+
+
+
+
+
 <footer class="bg-[#111111] text-white pt-20 pb-10 px-20 font-sans">
   <div class="max-w-7xl mx-auto">
     
@@ -83,4 +149,19 @@
 </footer>
 
 	</body>
+
+	<script>
+  const targetDate = new Date("March 1, 2026 00:00:00").getTime();
+
+  setInterval(() => {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
+    document.getElementById("hours").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
+    document.getElementById("minutes").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
+    document.getElementById("seconds").innerText = Math.floor((distance % (1000 * 60)) / 1000).toString().padStart(2, '0');
+  }, 1000);
+</script>
+
 </html>

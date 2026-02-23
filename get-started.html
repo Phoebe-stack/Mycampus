@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+	<title></title>
+  <style type="text/css">
+         .ultra-regular {
+              font-family: "Ultra", serif;
+              font-weight: 300;
+              font-style: normal;
+          }
+
+      .besley{
+            font-family: "Besley", serif;
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+      }
+  </style>
+
+</head>
+<body>
+
+	<section class="relative w-full min-h-screen bg-black text-white overflow-hidden font-mono flex flex-col justify-between p-6">
+  
+  <div class="absolute inset-0 z-0">
+    <img src="img/image-1.png" class="w-full h-full object-cover opacity-30 grayscale">
+    <!-- <img src="img/globe.mp4"> -->
+    <div class="absolute inset-0 flex justify-center">
+      <div class="w-[1px] h-full bg-white/10"></div>
+    </div>
+  </div>
+
+  <header class="relative z-10 flex justify-between items-start text-[10px] tracking-widest uppercase">
+    <div class="besley font-black normal-case tracking-tighter text-lg md:text-2xl">MyCampusPal</div>
+    <div class="besley hidden md:block text-xs md:text-sm">Subscribe to receive a notification upon our launch.</div>
+    <div class="besley flex gap-4 text-xs md:text-sm">
+      <a href="FN.html" class="hover:opacity-50 transition">FB</a>
+      <a href="FN.html" class="hover:opacity-50 transition">IN</a>
+      <a href="FN.html" class="hover:opacity-50 transition">X</a>
+    </div>
+  </header>
+
+  <main class="besley relative z-10 grid grid-cols-2 md:grid-cols-4 gap-4 items-center max-w-7xl mx-auto w-full">
+    
+    <div class="flex flex-col items-center group">
+      <span id="days" class="text-8xl md:text-[12rem] font-light tracking-tighter transition-all duration-500 group-hover:italic">18</span>
+      <span class="text-[10px] tracking-[0.3em] uppercase opacity-60">Days</span>
+    </div>
+
+    <div class="flex flex-col items-center group relative">
+      <div class="absolute left-0 top-1/2 w-2 h-2 bg-white rounded-full hidden md:block"></div>
+      <span id="hours" class="text-8xl md:text-[12rem] font-light tracking-tighter transition-all duration-500 group-hover:italic">09</span>
+      <span class="text-[10px] tracking-[0.3em] uppercase opacity-60">Hours</span>
+    </div>
+
+    <div class="flex flex-col items-center group">
+      <span id="minutes" class="text-8xl md:text-[12rem] font-light tracking-tighter transition-all duration-500 group-hover:italic">33</span>
+      <span class="text-[10px] tracking-[0.3em] uppercase opacity-60">Minutes</span>
+    </div>
+
+    <div class="flex flex-col items-center group">
+      <span id="seconds" class="text-8xl md:text-[12rem] font-light tracking-tighter transition-all duration-500 group-hover:italic">41</span>
+      <span class="text-[10px] tracking-[0.3em] uppercase opacity-60">Seconds</span>
+    </div>
+
+  </main>
+
+  <footer class="relative z-10 w-full">
+    <div class="max-w-md mx-auto mb-16 relative">
+      <form class="flex border-b border-white/30 pb-2">
+        <input type="email" placeholder="Your Email" class="bg-transparent flex-1 outline-none text-sm italic opacity-50 focus:opacity-100 transition">
+        <button type="submit" class="uppercase tracking-widest font-bold text-xs md:text-sm hover:text-[#22C55E] transition">Sign Up</button>
+      </form>
+    </div>
+
+    <div class="flex justify-between items-end text-[10px] tracking-widest uppercase opacity-60">
+      <div>© Prince</div>
+      <div class="normal-case italic">The Ultimate Student Companion</div>
+      <div>Follow us</div>
+    </div>
+  </footer>
+
+</section>
+
+
+
+</body>
+
+<script>
+  const targetDate = new Date("March 1, 2026 00:00:00").getTime();
+
+  setInterval(() => {
+    const now = new Date().getTime();
+    const distance = targetDate - now;
+
+    document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
+    document.getElementById("hours").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
+    document.getElementById("minutes").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
+    document.getElementById("seconds").innerText = Math.floor((distance % (1000 * 60)) / 1000).toString().padStart(2, '0');
+  }, 1000);
+</script>
+</html>
